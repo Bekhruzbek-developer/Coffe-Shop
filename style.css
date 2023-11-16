@@ -32,12 +32,14 @@ nav{
 .lists ul{
     display: flex;
     gap: 20px;
+    overflow-y: hidden;
 }
 .lists ul li a{
     color: white;
     font-size: 18px;
     transition: 0.2s;
     position: relative;
+
 }
 .lists ul li a:hover{
     color: #d3ad7f;
@@ -51,10 +53,16 @@ nav{
     left: 0;
     bottom: 3px;
     background-color:#d3ad7f ;
+
+}
+.lists ul li{
+    overflow: hidden;
 }
 .lists ul li a:hover::after{
     bottom: -4px;
     height: 1.5px;
+    overflow-y: hidden;
+    transition: 0.2s;
 }
 #bar{
     color: white;
@@ -65,16 +73,11 @@ nav{
 .toggle{
     right: 0;
 }
-
-
-
-
-
 .header-text{
     width: 100%;
     height: calc(100vh - 80px);
     color: white;
-    background-image: url("../images/home-img.jpeg");
+    background-image: url("./images/home-img.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -105,68 +108,6 @@ button{
 button:hover{
     letter-spacing: 3px;
 }
-
-/* about ------------------------------- */
-.about{
-    padding: 50px 50px;
-}
-
-.title{
-    font-size: 40px;
-    color: #d3ad7f;
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-.title span:nth-child(2){
-    color: white;
-    
-}
-
-.about-card{
-    background-color: #13131a;
-    display: flex;
-    align-items: center;
-    color: white;
-}
-.about-img{
-    width: 50%;
-}
-.about-text{
-    width: 50%;
-    padding: 40px;
-
-}
-.about-text h1{
-    font-size: 30px;
-}
-
-.about-text p{
-    margin: 40px 0px;
-    line-height: 30px;
-}
-@media screen and (max-width:1024px) {
-    .about-card{
-        background-color: #13131a;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        color: white;
-    }
-    .about-img{
-        width: 100%;
-    }
-    .about-img img{
-        width: 100%;
-    }
-    .about-text{
-        width: 100%;
-        padding: 30px;
-    
-    }
-}
-
-/* products section  */
 @media screen and (max-width:912px) {
     #bar{
         color: white;
@@ -204,54 +145,117 @@ button:hover{
         text-align: center;
     }
 }
+/* header page end  */
+
+/* about ------------------------------- */
+.about{
+    padding: 50px 50px;
+}
+
+.title{
+    font-size: 40px;
+    color: #d3ad7f;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.title span:nth-child(2){
+    color: white;
+    
+}
 
 
+.about-card{
+    background-color: #13131a;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.about-img{
+    width: 50%;
+}
+.about-text{
+    width: 50%;
+    padding: 40px;
 
+}
+.about-text h1{
+    font-size: 30px;
+}
 
-
-
-
-@media screen and (max-width:768px) {
-    .header-text h1{
-        font-size: 35px;
+.about-text p{
+    margin: 40px 0px;
+    line-height: 30px;
+}
+@media screen and (max-width:1024px) {
+    .about-card{
+        flex-direction: column;
     }
-    .header-text p{
-        font-size: 16px;
+    .about-img{
+        width: 100%;
+    }
+    .about-img img{
+        width: 100%;
     }
     .about-text{
-        padding: 20px;
-    
+        width: 100%;
+        padding: 30px;
     }
-    .about-text h1{
-        font-size: 24px;
-    }
-    
-    .about-text p{
-        margin: 20px 0px;
-        line-height: 25px;
-    }
+}   
+
+/* about section  */
+/* our menu page  */
+.menu .title span:nth-child(1){
+    color: white;
 }
-@media screen and (max-width:390px) {
-    .header-text h1{
-        font-size: 30px;
-    }
-    .header-text p{
-        font-size: 14px;
-    }
-    nav{
-        padding: 10px 20px;
-    }
-    .about-text{
-        padding: 15px;
-    
-    }
-    .about-text h1{
-        font-size: 16px;
-    }
-    
-    .about-text p{
-        font-size: 14px;
-        margin: 15px 0px;
-        line-height: 25px;
-    }
+.menu .title span:nth-child(2){
+    color: #d3ad7f;
 }
+.menu-cards{
+    padding: 20px 40px;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+
+.menu-cards .card{
+    border: 1px solid white;
+    width: 300px;
+    color: white;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+    align-items: center;
+    row-gap: 30px;
+}
+.card img{
+    width: 80px;
+}
+#coffee-name{
+    font-size: 25px;
+}
+#coffee-cost{
+    font-size: 14px;
+    padding: 0px 4px;
+
+}
+#coffee-cost strike{
+    font-style: italic;
+    font-weight: 100;
+    text-decoration-line: line-through;
+}
+.menu-cards .card:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* our menu page  */
